@@ -59,7 +59,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
       body: <Widget>[
         const HomeDashboard(),
         const ContactPage(),
-        const SmsPage(),
+        SmsPage(),
         const AlertPage(),
         const Profile(),
       ][currentPageIndex],
