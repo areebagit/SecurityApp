@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomeDashboard extends StatefulWidget {
-  const HomeDashboard({super.key});
+  const HomeDashboard({super.key}); // Constructor for HomeDashboard widget
 
   @override
   State<HomeDashboard> createState() => _HomeDashboardState();
@@ -11,19 +11,23 @@ class _HomeDashboardState extends State<HomeDashboard> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner:false,
+      debugShowCheckedModeBanner:false, // Removing the debug banner
+
       home: Scaffold(
-        appBar: AppBar(title: const Text("Home")),
+        appBar: AppBar(title: const Text("Home")), // Setting the app bar title
+
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              // First Elevated Button for Need Support
               Padding(
                 padding: const EdgeInsets.all(23.0),
                 child: ElevatedButton(
                   onPressed: () {
-                    // Add functionality for button 1 here
+                    // Add functionality for button 1 here (Need Support)
                     print('Button 1 pressed');
+                    // Add your code here to handle "Need Support" button press
                   },
                   style: ElevatedButton.styleFrom(
                     textStyle: const TextStyle(fontWeight: FontWeight.bold),
@@ -35,7 +39,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                     children: [
                       Text(
                         'Need Support', 
-                      style: TextStyle(fontSize:28.0  ),
+                        style: TextStyle(fontSize: 28.0),
                       ),
                       SizedBox(height: 5), // Adding space between text and button edge
                       Text('(press if You feel danger)'),
@@ -43,12 +47,15 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   ),
                 ),
               ),
+
+              // Second Elevated Button for Send Help
               Padding(
-                padding: const EdgeInsets.symmetric(vertical:40.0),
+                padding: const EdgeInsets.symmetric(vertical: 40.0),
                 child: ElevatedButton(
                   onPressed: () {
-                    // Add functionality for button 2 here
+                    // Add functionality for button 2 here (Send Help)
                     print('Button 2 pressed');
+                    // Add your code here to handle "Send Help" button press
                   },
                   style: ElevatedButton.styleFrom(
                     textStyle: const TextStyle(fontWeight: FontWeight.bold),
@@ -63,7 +70,6 @@ class _HomeDashboardState extends State<HomeDashboard> {
                         style: TextStyle(
                           fontSize: 28
                         ),
-
                       ),
                       SizedBox(height: 5), // Adding space between text and button edge
                       Text('(press when in danger)'),
